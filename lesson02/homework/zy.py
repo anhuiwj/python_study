@@ -35,7 +35,7 @@ def fblq(len):
     print("99项与100项")
     print(index99/index100)
 
-print('100以内全部的质数:') 
+print('100个质数:') 
 fblq(101)
         
 
