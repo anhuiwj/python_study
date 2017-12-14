@@ -3,17 +3,22 @@
 '''
 
 def zs(length):
-    li = {}
+ 
     li = list(range(length))
 
-    sm = 0
-    for i in range(0,len(li)-1):
-        if(li[i] ==  0 or li[i] ==  1):
-            li.remove(i)
-            continue
-        sm = li[i]
-        if(li[i] % sm == 0):li.remove(i)
-        
-    return li
+    newli = []
+
+    res = []
+    
+    index = 2
+    for k in range(0,length):
+        for i in range(0,len(li)):
+            if(li[i] == 0 or li[i] == 1 ): newli.append(li[i]) 
+            if(li[i] != index and li[i] % index == 0):newli.append(li[i])
+        index += 1
+    
+    for s in range(0,len(li)-1):
+            if(li[s] not in newli):res.append(li[s])
+    return res
  
 print(zs(100))
