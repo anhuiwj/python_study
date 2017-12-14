@@ -35,7 +35,7 @@ def fblq(len):
     print("99项与100项")
     print(index99/index100)
 
-print('100个质数:') 
+print('100斐波那契数:') 
 fblq(101)
         
 
